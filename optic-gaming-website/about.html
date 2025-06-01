@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <title>About Optic Gaming</title>
+      <link rel="stylesheet" href="ct_style.css" />
+      <link rel="stylesheet" href="opticlayout.css" />
+      <script src="script.js"></script>
+   </head>
+   <body>
+      <!-- HEADER -->
+      <header class="Logo">
+         <img src="opticgaminglonglogo.jpg" alt="Optic Gaming" /></a>
+         <nav>
+            <ul>
+               <li><a href="about.html">About Us</a></li>
+               <li><a href="roster.html">Optic Roster</a></li>
+               <li><a href="ecommerce.html">Shopping</a></li>
+               
+            </ul>
+         </nav>
+      </header>
+      <article>
+         <h1>About Us</h1>
+                                                       <!-- DATE AND TIME CLOCK -->
+         <div id="datetime"></div>
+         <img src="opticlogo.png" alt="" />
+         <script>
+            var datetimeDisplay = document.getElementById("datetime");
+            function updateDateTime() {
+                var currentDate = new Date();
+                var formattedDateTime = currentDate.toLocaleString();
+                datetimeDisplay.textContent = "Current Time and Date: " + formattedDateTime;
+            }
+            updateDateTime();
+            setInterval(updateDateTime, 1000);
+        </script>
+         <p>
+            <strong> Optic Gaming</strong> continues to connect with the fanbase through content creation and by maintaining the best competitive teams in the world. In late 2021, OpTic merged with powerhouse Esports organization Envy in order to keep
+            pushing the scene forward. With the introduction of franchising in Call of Duty Esports in 2020, the Green Wall is represented by OpTic Texas.
+         </p>
+         <p>
+            <strong> Optic Gaming</strong> is also competing in several Esports such as Halo, Apex Legends, and Rocket League. All OpTic members can be found in content on the main YouTube channel and social media pages. After a decade and a half, OpTic
+            continues to be one of the powerhouse organizations in the gaming industry. Having been <em>built by brick,</em> the Green Wall remains strong.
+         </p>
+      </article>
+<!-- FOOTER -->
+      <footer><strong>Optic Gaming</strong>---By using this website you agree with our Privacy Policy---COPYRIGHT © 2023</footer>
+   </body>
+</html>

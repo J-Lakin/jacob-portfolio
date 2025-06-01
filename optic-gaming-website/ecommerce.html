@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <title>Shopping Optic</title>
+      <link href="style.css" rel="stylesheet" />
+      <link href="opticlayout.css" rel="stylesheet" />
+      <script src="script.js"></script>
+   </head>
+
+   <body>
+      <header class="Logo">
+         <img src="opticgaminglonglogo.jpg" alt="Optic Gaming" /></a>
+         <nav>
+            <ul>
+               <li><a href="about.html">About Us</a></li>
+               <li><a href="roster.html">Optic Roster</a></li>
+               <li><a href="ecommerce.html">Shopping</a></li>
+            </ul>
+         </nav>
+      </header>
+      <body>
+         <div class="product">
+            <h2>Optic Hat</h2>
+            <p>Price: $15</p>
+            <img src="optichat.jpg" alt="Optic Hat">
+            <button onclick="addToCart('Optic Hat', 15)">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <h2>Optic Shirt</h2>
+            <p>Price: $20</p>
+            <img src="opticshirt.jpg" alt="Optic Shirt">
+            <button onclick="addToCart('Optic Shirt', 20)">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <h2>Optic Hoodie</h2>
+            <p>Price: $35</p>
+            <img src="optichoodie.jpg" alt="Optic Hoodie">
+            <button onclick="addToCart('Optic Hoodie', 35)">Add to Cart</button>
+        </div>
+            <!-- FORM  -->
+        <form>
+            <h2>Your Current Cart:</h2>
+            <div id="cart-items"></div>
+            <p id="cart-total">Total: $0</p>
+        </form>
+
+
+        <section>
+            <!-- FORM  -->
+            <form action="http://example.com/cg/regiser" method="POST">
+               <label for="title" class="bold-text">Customer Information</label>
+                                           <!-- Pattern validation for phone,zip,email & required -->
+               <label>First Name*</label> <input type="text" name="firstName" id="fnBox" required /> <label>Last Name*</label> <input type="text" name="lastName" id="lnBox" required /> <label>Address*</label
+               ><textarea name="address" id="addBox" required></textarea> <label>City & State </label><input type="text" name="group" id="groupBox" /> <label>E-mail*</label><input type="email" name="email" id="mailBox" required />
+               <label>Phone Number*</label> <input type="tel" name="phoneNumber" id="phoneBox" required placeholder="(nnn) nnn-nnnn" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" /> 
+               <label for="zip">Zip Code*</label>
+               <input type="text" name="zip" id="zipBox" pattern="^\d{5}(?:-\d{4})?$" placeholder="12345 or 12345-6789" required />
+
+               <p>
+                            <!-- SUBMIT -->
+
+                  <button type="submit">Place Order</button>
+               </p>
+            </form>
+         </section>
+        <script>
+            const cart = {};
+    
+            function addToCart(item, price) {
+                if (cart[item]) {
+                    cart[item] += price;
+                } else {
+                    cart[item] = price;
+                }
+    
+                updateCartDisplay();
+            }
+    
+            function updateCartDisplay() {
+                const cartItems = document.getElementById("cart-items");
+                const cartTotal = document.getElementById("cart-total");
+    
+                let cartHtml = "";
+                let total = 0;
+    
+                for (const item in cart) {
+                    cartHtml += `<p>${item}: $${cart[item]}</p>`;
+                    total += cart[item];
+                }
+    
+                cartItems.innerHTML = cartHtml;
+                cartTotal.textContent = `Total: $${total}`;
+            }  
+        </script>
+   <footer><strong>Optic Gaming</strong>---By using this website you agree with our Privacy Policy---COPYRIGHT © 2023</footer>
+</html>

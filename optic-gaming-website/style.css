@@ -1,0 +1,166 @@
+/* Jacob Lakin Final*/
+
+/* Styling for Shopping page */
+body,
+html {
+   width: 100%;
+   margin: 0;
+   padding: 0;
+}
+
+.product {
+   border: 1px solid #ccc;
+   padding: 10px;
+   margin: 10px;
+   width: 30%; /* Adjust the width as needed */
+   display: inline-block;
+}
+
+form {
+   border: 1px solid #ccc;
+   padding: 20px;
+   margin: 20px;
+   width: 30%; /* Adjust the width as needed */
+   float: inline-end;
+   text-align: center;
+}
+
+label,
+select {
+   display: block;
+   margin-bottom: 10px;
+}
+/* --------------------------------BACKROUND COLOR for submit */
+
+input[type="submit"] {
+   background-color: #007bff;
+   color: #fff;
+   border: none;
+   padding: 10px 20px;
+   cursor: pointer;
+   margin: 0 auto;
+}
+
+/* Form Layout Styles */
+
+label {
+   display: block;
+   float: left;
+   clear: left;
+   margin: 5px;
+   width: 200px;
+}
+
+input,
+select,
+textarea {
+   display: block;
+   float: left;
+   margin: 5px 0px;
+   width: 200px;
+}
+
+textarea {
+   height: 100px;
+}
+
+/* style for customer information title */
+.bold-text {
+   font-weight: bold;
+   font-size: 35px;
+}
+
+form p {
+   clear: left;
+   text-align: center;
+   padding-top: 40px;
+}
+
+input[type="submit"] {
+   background-color: rgb(144, 170, 144);
+   color: rgb(245, 245, 165);
+   border-radius: 20px;
+   float: none;
+   display: inline;
+   font-size: 1.1em;
+   height: 30px;
+   width: 150px;
+}
+
+/* Validation Styles */
+
+input:focus,
+select:focus,
+textarea:focus {
+   background-color: rgb(146, 201, 81);
+}
+.fnBox:focus:valid,
+.lnBox:focus:valid,
+.mailBox:focus:valid,
+.phoneBox:focus:valid,
+.idBox:focus:valid {
+   background-color: rgb(220, 225, 220);
+   background-image: url("cg_valid.png");
+   background-repeat: no-repeat;
+}
+
+.fnBox:not(:focus):not(:valid),
+.lnBox:not(:focus):not(:valid),
+.mailBox:not(:focus):not(:valid),
+.phoneBox:not(:focus):not(:valid),
+.idBox:not(:focus):not(:valid) {
+   background-color: rgb(255, 232, 232);
+   background-image: url("cg_invalid.png");
+   background-repeat: no-repeat;
+}
+
+/* CSS for adding borders */
+.product {
+   border: 1px solid #ccc;
+   padding: 10px;
+   margin: 10px;
+   display: inline-block;
+   width: 30%; /* Adjust the width as needed */
+}
+
+.product-title,
+.product-price {
+   border-bottom: 1px solid #ccc;
+   padding: 5px;
+   margin: 0;
+}
+
+.product-image {
+   border: 1px solid #ccc;
+}
+
+button {
+   border: 1px solid #007bff;
+   background-color: #007bff;
+   color: #fff;
+   padding: 10px 20px;
+   cursor: pointer;
+}
+
+/* Styling for about optic spinning img */
+.image-container {
+   /* ---------------------------Styling flex*/
+   display: flex;
+   justify-content: right;
+   align-items: center;
+   height: 100vh;
+}
+
+.spin-image {
+   width: 200px; /* Adjust the size as needed */
+   animation: spin 180s linear infinite; /* 3 minutes (180 seconds) duration */
+}
+
+@keyframes spin {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+}
